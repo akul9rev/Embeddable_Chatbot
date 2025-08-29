@@ -1,0 +1,101 @@
+/* 
+ * Embeddable Chatbot Widget - Additional Styles
+ * This file provides additional styling options for the chatbot widget
+ * It's optional and the widget works without it
+ */
+
+/* Custom scrollbar for webkit browsers */
+#chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: #0b0f14;
+    border-radius: 3px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+}
+
+/* Smooth animations for better UX */
+#embeddable-chatbot-container * {
+    transition: all 0.2s ease;
+}
+
+/* Hover effects for interactive elements */
+#chat-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+#chat-send:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus states for accessibility */
+#chat-input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+    #chat-window {
+        width: calc(100vw - 40px) !important;
+        height: calc(100vh - 40px) !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        left: 20px !important;
+    }
+}
+
+/* Dark mode support (if user prefers dark mode) */
+@media (prefers-color-scheme: dark) {
+    #chat-window {
+        background: #0b0f14 !important;
+        color: #e5e7eb !important;
+    }
+    
+    #chat-messages {
+        background: #0f172a !important;
+    }
+    
+    #chat-input {
+        background: #111827 !important;
+        color: #e5e7eb !important;
+        border-color: #243041 !important;
+    }
+}
+
+/* Print styles - hide chatbot when printing */
+@media print {
+    #embeddable-chatbot-container {
+        display: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #chat-window {
+        border: 2px solid #000000;
+    }
+    
+    #chat-input {
+        border: 2px solid #000000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #embeddable-chatbot-container * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

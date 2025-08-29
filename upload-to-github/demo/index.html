@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Embeddable Chatbot Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(1200px 600px at 80% -10%, rgba(139,92,246,0.15), transparent),
+                        radial-gradient(1000px 500px at 20% 110%, rgba(6,182,212,0.12), transparent),
+                        #0b0f14;
+            min-height: 100vh;
+            color: #e5e7eb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.4em;
+        }
+        
+        .feature-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .demo-section {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 40px;
+        }
+        
+        .demo-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        .code-example {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        
+        
+        .btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-color: transparent;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Noir Vogue</h1>
+            <p class="subtitle">Contemporary fashion with a timeless edge. Discover curated looks and effortless style.</p>
+            
+            <!-- Quick Navigation -->
+            <div style="margin-top: 30px;">
+                <a href="#new" class="btn btn-primary" style="margin: 5px;">Shop New Arrivals</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>New Season</h3>
+                <p>Monochrome layers, tailored silhouettes, and statement textures for FW24.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Essentials</h3>
+                <p>Everyday pieces refined: premium tees, wide-leg trousers, and rib knits.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Accessories</h3>
+                <p>Minimal bags, sculptural jewelry, and leather staples to finish your look.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Editorial</h3>
+                <p>Explore our lookbook for inspiration curated by our in-house stylists.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Made to Last</h3>
+                <p>Responsible materials and craftsmanship that stand the test of time.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Member Perks</h3>
+                <p>Early access drops and exclusive offers for our community.</p>
+            </div>
+        </div>
+
+        <div class="demo-section" id="new">
+            <h2>New Arrivals</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Discover our latest collection featuring minimalist designs and premium materials.
+            </p>
+        </div>
+
+        <div class="demo-section" id="editorial">
+            <h2>Editorial</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Discover pared-back silhouettes, sharp tailoring, and refined textures.
+            </p>
+        </div>
+
+        
+
+        <div class="footer">
+            <p>&copy; 2024 Noir Vogue. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize chatbot with fashion site config
+        window.EMBEDDABLE_CHATBOT_CONFIG = {
+            title: 'Noir Vogue — Stylist',
+            welcomeMessage: 'Welcome! I can help with sizing, styling, and product info.',
+            primaryColor: '#1a1a1a',
+            secondaryColor: '#2a2a2a',
+            position: 'bottom-right',
+            apiUrl: 'http://localhost:3000/api',
+            autoExpand: false
+        };
+    </script>
+    
+    <!-- Load the chatbot widget AFTER setting config -->
+    <script src="../widget/embeddable-chatbot.js"></script>
+    
+    <script>
+        
+    </script>
+</body>
+</html>
+
